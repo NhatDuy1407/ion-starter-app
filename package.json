@@ -21,7 +21,6 @@
     "format:all": "prettier --check \"./**/*.{js,ts,json,xml,html,scss}\"",
     "format:all:fix": "prettier --write \"./**/*.{js,ts,json,xml,html,scss}\"",
     "e2e": "ng e2e",
-    "pre-commit": "pretty-quick --staged && ng lint && ng test",
     "prepare": "husky install"
   },
   "private": true,
