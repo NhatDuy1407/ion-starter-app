@@ -8,8 +8,11 @@
     "start": "ng serve",
     "start:android": "ionic capacitor run android",
     "start:ios": "ionic capacitor run ios",
-    "build": "ng build --prod",
+    "build": "node --max_old_space_size=6144 ./node_modules/@angular/cli/bin/ng build  --progress --configuration production",
+    "build:android": "ionic capacitor build android --prod --source-map=true",
+    "build:ios": "ionic capacitor build ios --prod --source-map=true",
     "test": "ng test",
+    "test:ci": "ng test --ci",
     "test:cov": "ng test --coverage",
     "lint": "ng lint",
     "lint:all": "run-p lint:ts lint:scss",
@@ -19,7 +22,9 @@
     "lint:scss": "stylelint \"src/**/*.scss\" --syntax scss",
     "lint:scss:fix": "stylelint \"src/**/*.scss\" --syntax scss --fix",
     "format:all": "prettier --check \"./**/*.{js,ts,json,xml,html,scss}\"",
-    "format:all:fix": "prettier --write \"./**/*.{js,ts,json,xml,html,scss}\""
+    "format:all:fix": "prettier --write \"./**/*.{js,ts,json,xml,html,scss}\"",
+    "pretty:staged": "pretty-quick --staged",
+    "lint:staged": "lint-staged"
   },
   "private": true,
   "dependencies": {
@@ -65,8 +70,6 @@
     "eslint-plugin-jsdoc": "30.7.6",
     "eslint-plugin-prefer-arrow": "1.2.2",
     "husky": "^7.0.0",
-    "jasmine-core": "~3.8.0",
-    "jasmine-spec-reporter": "~5.0.0",
     "jest": "^27.0.6",
     "lint-staged": "^11.1.2",
     "npm-run-all": "^4.1.5",
