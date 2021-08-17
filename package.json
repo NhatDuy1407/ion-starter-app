@@ -6,8 +6,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "start:android": "ionic capacitor run android",
+    "start:ios": "ionic capacitor run ios",
+    "build": "ng build --prod",
     "test": "ng test",
+    "test:cov": "ng test --coverage",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -32,6 +35,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-builders/jest": "^12.1.0",
     "@angular-devkit/build-angular": "~12.1.1",
     "@angular-eslint/builder": "~12.0.0",
     "@angular-eslint/eslint-plugin": "~12.0.0",
@@ -45,6 +49,7 @@
     "@ionic/angular-toolkit": "^4.0.0",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/jest": "^27.0.1",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "4.16.1",
     "@typescript-eslint/parser": "4.16.1",
@@ -55,6 +60,7 @@
     "husky": "^7.0.1",
     "jasmine-core": "~3.8.0",
     "jasmine-spec-reporter": "~5.0.0",
+    "jest": "^27.0.6",
     "karma": "~6.3.2",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
@@ -64,6 +70,7 @@
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1",
     "protractor": "~7.0.0",
+    "ts-jest": "^27.0.5",
     "ts-node": "~8.3.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "~4.2.4"
@@ -71,8 +78,8 @@
   "description": "The ionic starter application",
   "husky": {
     "hooks": {
-        "pre-commit": "pretty-quick --staged && ng lint && ng test",
-        "pre-push": "ng build --aot true"
+      "pre-commit": "pretty-quick --staged && ng lint",
+      "pre-push": "ng build --aot true"
     }
   }
 }
