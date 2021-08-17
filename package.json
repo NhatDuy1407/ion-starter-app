@@ -19,15 +19,9 @@
     "lint:scss": "stylelint \"src/**/*.scss\" --syntax scss",
     "lint:scss:fix": "stylelint \"src/**/*.scss\" --syntax scss --fix",
     "format:all": "prettier --check \"./**/*.{js,ts,json,xml,html,scss}\"",
-    "format:all:fix": "prettier --write \"./**/*.{js,ts,json,xml,html,scss}\"",
-    "e2e": "ng e2e"
+    "format:all:fix": "prettier --write \"./**/*.{js,ts,json,xml,html,scss}\""
   },
   "private": true,
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
   "dependencies": {
     "@angular/common": "~12.1.1",
     "@angular/compiler": "~12.1.1",
@@ -70,7 +64,7 @@
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
     "eslint-plugin-prefer-arrow": "1.2.2",
-    "husky": "^7.0.1",
+    "husky": "^4.3.0",
     "jasmine-core": "~3.8.0",
     "jasmine-spec-reporter": "~5.0.0",
     "jest": "^27.0.6",

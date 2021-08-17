@@ -15,7 +15,6 @@ module.exports = {
     testPathIgnorePatterns: [
       '<rootDir>/coverage/',
       '<rootDir>/dist/',
-      '<rootDir>/e2e/',
       '<rootDir>/node_modules/',
       '<rootDir>/src/app/*.(js|scss)'
     ],
