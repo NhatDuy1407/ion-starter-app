@@ -20,16 +20,14 @@
     "lint:scss:fix": "stylelint \"src/**/*.scss\" --syntax scss --fix",
     "format:all": "prettier --check \"./**/*.{js,ts,json,xml,html,scss}\"",
     "format:all:fix": "prettier --write \"./**/*.{js,ts,json,xml,html,scss}\"",
-    "e2e": "ng e2e",
-    "prepare": "husky install"
+    "e2e": "ng e2e"
   },
   "private": true,
   "husky" : {
     "hooks": {
-      "pre-commit": "ng-test"
+      "pre-commit": "npm run lint"
     }
-  }
-  ,
+  },
   "dependencies": {
     "@angular/common": "~12.1.1",
     "@angular/compiler": "~12.1.1",
