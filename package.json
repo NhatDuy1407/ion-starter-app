@@ -20,7 +20,8 @@
     "lint:scss:fix": "stylelint \"src/**/*.scss\" --syntax scss --fix",
     "format:all": "prettier --check \"./**/*.{js,ts,json,xml,html,scss}\"",
     "format:all:fix": "prettier --write \"./**/*.{js,ts,json,xml,html,scss}\"",
-    "abc": "lint-staged"
+    "abc": "lint-staged",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -65,7 +66,7 @@
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
     "eslint-plugin-prefer-arrow": "1.2.2",
-    "husky": "^4.3.0",
+    "husky": "^7.0.1",
     "jasmine-core": "~3.8.0",
     "jasmine-spec-reporter": "~5.0.0",
     "jest": "^27.0.6",
@@ -80,11 +81,5 @@
     "ts-node": "~8.3.0",
     "typescript": "~4.2.4"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "ng lint"
-    }
-  },
-  
   "description": "The ionic starter application"
 }
