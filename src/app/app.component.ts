@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {
-    const a = "ok";
+    const a = "ok la";
   }
 }
