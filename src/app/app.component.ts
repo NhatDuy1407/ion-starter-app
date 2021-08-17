@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {
-    const a = "ok la la aaaaaaa";
+    const a = "ok la la aaaaaaa !";
+    let b = "haha";
   }
 }
