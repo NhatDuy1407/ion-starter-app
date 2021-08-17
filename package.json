@@ -16,12 +16,6 @@
     "pre-commit": "pretty-quick --staged && ng lint && ng test"
   },
   "private": true,
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && ng lint && ng test --watch=false",
-      "pre-push": "ng build --aot true"
-    }
-  },
   "dependencies": {
     "@angular/common": "~12.1.1",
     "@angular/compiler": "~12.1.1",
