@@ -16,12 +16,13 @@
     "paths": {
       "@app/*": ["src/app/*"],
       "@env/*": ["src/environments/*"]
-    }
+    },
+    "esModuleInterop": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  },
+  }
 }
