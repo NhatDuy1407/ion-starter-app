@@ -1,0 +1,3 @@
+├──shared/
+| ├──abstracts/
+| | ├──shared-facade/

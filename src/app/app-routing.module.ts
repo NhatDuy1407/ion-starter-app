@@ -7,12 +7,12 @@ const routes: Routes = [
   Tabs.childRoutes([
     {
       path: 'influencers',
-      loadChildren: () => import('./domains/influencer/influencer.module').then((m) => m.InfluencerModule),
+      loadChildren: () => import('./features/influencer/influencer.module').then((m) => m.InfluencerModule),
       canActivate: [AuthenticationGuard],
     },
     {
       path: 'notes',
-      loadChildren: () => import('./domains/note/note.module').then((m) => m.NotePageModule),
+      loadChildren: () => import('./features/note/note.module').then((m) => m.NotePageModule),
       canActivate: [AuthenticationGuard],
     },
     { path: '**', redirectTo: '/influencers', pathMatch: 'full' },
@@ -24,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: 'note',
-    loadChildren: () => import('./domains/note/note.module').then((m) => m.NotePageModule),
+    loadChildren: () => import('./features/note/note.module').then((m) => m.NotePageModule),
   },
 ];
 

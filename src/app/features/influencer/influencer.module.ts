@@ -7,17 +7,18 @@ import { InfluencerPageRoutingModule } from './influencer-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { StoreModule } from '@ngrx/store';
 import { InfluencerFacade } from './influencer.facade';
-import { InfluencerState } from './state/influencer.state';
 import { InfluencerService } from './services/influencer.service';
 import { InfluencerPage } from './pages/influencer.page';
 import { EffectsModule } from '@ngrx/effects';
 import { InfluencerEffects } from './state/influencer.effects';
 import { influencersFeatureKey, influencersReducer } from './state/influencer.reducer';
+import { SharedModule } from '@app/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
+    SharedModule,
     IonicModule,
     TranslateModule.forChild(),
     StoreModule.forFeature(influencersFeatureKey, influencersReducer),
@@ -25,6 +26,6 @@ import { influencersFeatureKey, influencersReducer } from './state/influencer.re
     InfluencerPageRoutingModule,
   ],
   declarations: [InfluencerPage],
-  providers: [InfluencerFacade, InfluencerState, InfluencerService],
+  providers: [InfluencerFacade, InfluencerService],
 })
 export class InfluencerModule {}
