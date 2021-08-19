@@ -8,7 +8,7 @@
     "start": "ng serve",
     "start:android": "ionic capacitor run android",
     "start:ios": "ionic capacitor run ios",
-    "build": "node --max_old_space_size=6144 ./node_modules/@angular/cli/bin/ng build  --progress --configuration production",
+    "build": "node --max_old_space_size=6144 ./node_modules/@angular/cli/bin/ng build  --progress --configuration production --source-map",
     "build:android": "ionic capacitor build android --prod --source-map=true",
     "build:ios": "ionic capacitor build ios --prod --source-map=true",
     "test": "ng test",
